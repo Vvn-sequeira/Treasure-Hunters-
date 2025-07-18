@@ -3,11 +3,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import First from "./First"
+import { data } from './data/data';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+  <BrowserRouter>
+      <Routes>
+        <Route path="*" element={<First  />} />
+        <Route path="/start" element={<App data={data[0]} />} />
+        <Route path="/First" element={<App data={data[1]} />} />
+        <Route path="/Second" element={<App  data={data[2]}/>} />
+        <Route path="/Third" element={<App  data={data[3]}/>} />
+        <Route path="/Fourth" element={<App  data={data[4]}/>} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
