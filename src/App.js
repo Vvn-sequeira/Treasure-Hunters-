@@ -41,10 +41,10 @@ function App({ data }) {
 
 
 
-        <div className="note">
+        {/* <div className="note">
           <p>NOTE : <br></br> </p>
           <p> <b>[for Ex....]</b>  <br></br>for (int i=0 ;i n ; i++) <br></br> console.log( i ) <br></br>  <br></br> ans :<b> 0 1 2 3 4 5</b> (with Space) </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
