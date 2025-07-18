@@ -8,6 +8,15 @@ function App({ data }) {
 
   const [answer, setanswer] = useState("  ");
 
+  const customDark = {
+    ...dark,
+    'comment': {
+      ...dark['comment'],
+      color: '#00ff88', // your desired color
+      fontStyle: 'italic'
+    }
+  };
+
   const onChange = (e) => {
     setanswer(e.target.value);
   };
@@ -16,10 +25,10 @@ function App({ data }) {
     <div className="container">
       <div className="box">
 
-        <SyntaxHighlighter  language="javascript" style={dark}   customStyle={{ fontSize: '12px' }} >
+        <SyntaxHighlighter  language="java" style={customDark}   customStyle={{ fontSize: '12px' }} onCopy={(e)=> e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>
           {data.q}
         </SyntaxHighlighter>
-
+        <p className="ans"> Ans here ...</p>
         <div className="input">
           <input
             type="text"
@@ -51,3 +60,18 @@ function App({ data }) {
 }
 
 export default App;
+ 
+
+/* 
+Links 
+https://treasure-hunters-alpha.vercel.app/First
+https://treasure-hunters-alpha.vercel.app/Second
+https://treasure-hunters-alpha.vercel.app/Third
+https://treasure-hunters-alpha.vercel.app/Fourth
+https://treasure-hunters-alpha.vercel.app/Fifth
+https://treasure-hunters-alpha.vercel.app/Sixth
+https://treasure-hunters-alpha.vercel.app/Seventh
+https://treasure-hunters-alpha.vercel.app/Eighth
+https://treasure-hunters-alpha.vercel.app/Ninth
+
+*/
