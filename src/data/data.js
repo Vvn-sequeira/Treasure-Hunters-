@@ -28,16 +28,26 @@ export const data = [
     },
     {
       q: `
-  public class LoopTrap {
-    public static void main(String[] args) {
+    // What is the final value of a?
+    public class LoopTrap {
+      public static void main(String[] args) {
       int a = 5;
       for (int i = 0; i < a; i++) {
         a--;
       }
-      System.out.println("Final value of a: " + a);
+      for (int i = 0; i < a; i++) {
+        a--;
+      }
+      for (int i = 0; i < a; i++) {
+        a--;
+      }
+      for (int i = 0; i < a; i++) {
+        a--;
+      }
+      System.out.println("Final value of a: " + a); System.out.println("Final value of a: " + a);
     }
   }
-  // What is the final value of a?
+
       `,
       ans: "2",
       hint: "Look under the table in the library",

@@ -35,34 +35,54 @@ width: 100%;
 
 input {
   width: 100%;
-  /* max-width: 400px; */
+  margin: 0 12px;
   border: 2px solid black;
-  border-radius: 23px;
 }
 
 .fail{
-box-shadow: 1px 1px 60px red ;
+  border: 2px solid red ;
+  box-shadow: inset 1px 1px 10px red;
 }
 .pass{ 
-box-shadow: 1px 1px 60px rgb(6, 225, 28) ;
+  border: 2px solid green;
+  box-shadow: inset 1px 1px 10px green;
 }
+
+
 
 
 .Hint{
-  margin: 12px ;
+  margin: 8px ;
  padding: 30px ;
- background-color:  #0A0A1B;
+ background-color:  #ededed;
  margin-top: 34px ;
- border-radius: 23px ;
+ border-radius: 13px ;
  color: #0A0A1B ;
+box-shadow: inset 1px 1px 9px black;
+font-family: 'Times New Roman', Times, serif;
 
 }
 .Hint h1{
     font-size: 30px ;
+   color: white;
 }
 
 .ans{
     margin-left: 12px ;
+}
+
+.Green{
+  margin: 10px ;
+ padding: 30px ;
+ background-color:  #1bc380;
+ margin-top: 34px ;
+ border-radius: 13px ;
+ color: #0A0A1B ;
+ box-shadow: inset 1px 1px 30px black;
+ border: 4px solid black;
+}
+.Green h1{
+   color: black;
 }
 
 @media (min-width: 1024px) {
@@ -74,7 +94,7 @@ box-shadow: 1px 1px 60px rgb(6, 225, 28) ;
    padding: 20px ;
    background-color:  #0A0A1B;
    margin-top: 34px ;
-   border-radius: 23px ;
+   border-radius: 13px ;
   
   }
   .input{

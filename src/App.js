@@ -17,9 +17,7 @@ function App({ data }) {
     }
   };
 
-  const onChange = (e) => {
-    setanswer(e.target.value);
-  };
+ 
 
   return (
     <div className="container">
@@ -32,19 +30,19 @@ function App({ data }) {
         <div className="input">
           <input
             type="text"
-            placeholder="ans here "
+            placeholder="Answer here "
             style={{ padding: "30px" }}
             value={answer}
-            onChange={onChange}
+            onChange={(e)=> { (setanswer(e.target.value))}}
             className={(answer.trim()) === (data.ans) ? "pass" : "fail"}
           ></input>
         </div>
 
-        <div className="Hint">
+        <div className={answer.trim() === data.ans ? "Green" : "Red"}>
           {(answer.trim()) === (data.ans) ? (
-            <h1 style={{color: "green"}}>{data.hint}</h1>
+            <h1>{data.hint}</h1>
           ) : (
-            <h1> Enter a correct ans for the HINT</h1>
+            <h1 className="Hint">Please provide the correct answer based on the hint.</h1>
           )}
         </div>
 
